@@ -70,6 +70,8 @@ threadmain(int argc, char *argv[])
 
 	ncol = -1;
 
+	nodotfiles = 1;
+
 	loadfile = nil;
 	ARGBEGIN{
 	case 'D':

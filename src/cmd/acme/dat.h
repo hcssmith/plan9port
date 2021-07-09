@@ -554,6 +554,7 @@ int			erroutfd;
 int			messagesize;		/* negotiated in 9P version setup */
 int			globalautoindent;
 int			dodollarsigns;
+int			nodotfiles;
 char*		mtpt;
 
 enum

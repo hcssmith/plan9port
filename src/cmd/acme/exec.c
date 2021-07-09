@@ -71,6 +71,7 @@ static Rune LCut[] = { 'C', 'u', 't', 0 };
 static Rune LDel[] = { 'D', 'e', 'l', 0 };
 static Rune LDelcol[] = { 'D', 'e', 'l', 'c', 'o', 'l', 0 };
 static Rune LDelete[] = { 'D', 'e', 'l', 'e', 't', 'e', 0 };
+static Rune LDotfiles[] = { 'D', 'o', 't', 'f', 'i', 'l', 'e', 's', 0 };
 static Rune LDump[] = { 'D', 'u', 'm', 'p', 0 };
 static Rune LEdit[] = { 'E', 'd', 'i', 't', 0 };
 static Rune LExit[] = { 'E', 'x', 'i', 't', 0 };
@@ -103,6 +104,7 @@ Exectab exectab[] = {
 	{ LDelcol,		delcol,	FALSE,	XXX,		XXX		},
 	{ LDelete,		del,		FALSE,	TRUE,	XXX		},
 	{ LDump,		dump,	FALSE,	TRUE,	XXX		},
+	{ LDotfiles,	dotfiles,	FALSE,	XXX,		XXX		},
 	{ LEdit,		edit,		FALSE,	XXX,		XXX		},
 	{ LExit,		xexit,	FALSE,	XXX,		XXX		},
 	{ LFont,		fontx,	FALSE,	XXX,		XXX		},
@@ -1804,4 +1806,17 @@ run(Window *win, char *s, Rune *rdir, int ndir, int newns, char *argaddr, char *
 	arg[0] = c;
 	arg[1] = cpid;
 	threadcreate(runwaittask, arg, STACK);
+}
+
+void	dotfiles(Text *_1, Text *_2, Text *_3, int _4, int _5, Rune *_6, int _7)
+{
+  USED(_1);
+  USED(_2);
+  USED(_3);
+  USED(_4);
+  USED(_5);
+  USED(_6);
+  USED(_7);
+
+  nodotfiles = !nodotfiles;
 }
